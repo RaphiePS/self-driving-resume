@@ -1,0 +1,24 @@
+body {
+	margin: 0;
+	background-color: none;
+}
+
+canvas {
+    display: block;
+}
+
+#controls {
+	position: fixed;
+	z-index: 999;
+	top: 25px;
+	left: 25px;
+	color: #2ecc71;
+}
+
+#controls a {
+	color: #2ecc71;
+}
+
+#return {
+	display: none;
+}

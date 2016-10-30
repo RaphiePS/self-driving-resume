@@ -1,0 +1,35 @@
+{
+	"config": {
+		"font": "/System/Library/Fonts/Avenir Next.ttc",
+		"size": 32,
+		"cutoff": 30
+	},
+	"categories": {
+		"work": [
+			"Work",
+			"-------------------------------------------------------",
+			"Slack (Summer 2016): Google Drive Integration",
+			"Cruise (Spring 2016): Machine Learning on LIDAR data",
+			"Chartbeat (Summer 2015): Data infrastructure with Kafka",
+			"Square (Summer 2014): Webhooks service in Go",
+			"Camio (Summer 2013): JavaScript motion detection"
+		],	
+		"education": [
+			"Education",
+			"-------------------------------------------------------",
+			"Stanford '18 / Symbolic Systems with AI Concentration",
+			"Classes (past): CS229, CS231n, CS221",
+			"Classes (current): CS331b, CS131"
+		],
+		"skills": [
+			"Technologies / Skills",
+			"-------------------------------------------------------",
+			"Python / TensorFlow",
+			"C++",
+			"React",
+			"iOS",
+			"The Low Level Dirty Work of Getting and Cleaning A Boatload of Data",
+			"The High Level Whiteboard Work of Training Good Models"
+		]
+	}
+}
