@@ -42,6 +42,7 @@ var setup = function() {
 	scene.add(points);
 
 	controls = new THREE.OrthographicTrackballControls(camera);
+	controls.zoomSpeed = 0.1;
 	controls.addEventListener("change", render);
 
 
