@@ -11,6 +11,7 @@ var snappingDests;
 var setup = function() {
 	WIDTH = window.innerWidth;
 	HEIGHT = window.innerHeight;
+	CUBESIZE = WIDTH > 500 ? 500 : 200;
 
 	renderer = new THREE.WebGLRenderer();
 	renderer.setSize(WIDTH, HEIGHT);
@@ -56,7 +57,7 @@ var rand = function(size) {
 
 var createPoints = function() {
 	for (var i = 0; i < N; i++) {
-		pointsGeometry.vertices.push(new THREE.Vector3(rand(500), rand(500), rand(500)));
+		pointsGeometry.vertices.push(new THREE.Vector3(rand(CUBESIZE), rand(CUBESIZE), rand(CUBESIZE)));
 	}
 }
 
@@ -74,7 +75,7 @@ var updatePoints = function() {
 
 		dZ = rand(speed);
 
-		pointsGeometry.vertices[i] = new THREE.Vector3(v.x + dX, v.y + dY, Math.min(500, v.z + dZ));
+		pointsGeometry.vertices[i] = new THREE.Vector3(v.x + dX, v.y + dY, Math.min(CUBESIZE, v.z + dZ));
 	}
 
 	pointsGeometry.verticesNeedUpdate = true;
@@ -98,7 +99,9 @@ var snapTo = function(pixels) {
 		var offsetX = pixel.x - (maxX / 2);
 		var offsetY = pixel.y - (maxY / 2);
 
-		snappingDests.push({x: offsetX, y: offsetY})
+		var scaleFactor = CUBESIZE == 500 ? 1 : 0.37;
+
+		snappingDests.push({x: offsetX * scaleFactor, y: offsetY * scaleFactor})
 	}
 }
 
